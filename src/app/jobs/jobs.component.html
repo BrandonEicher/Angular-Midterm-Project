@@ -6,9 +6,13 @@
     </div>
     <div>
         <h1>Work History</h1>
-        <div>
-                <p><span class="jobdetails" (click)="lookUp('detassle corn')">Detassle Corn</span></p>
-                <p><span class="jobdetails" (click)="lookUp('excavation')">Excavation</span></p>
-        </div>
     </div>
-</div>
+    <div *ngIf="jobs.length">
+        <h2>Jobs</h2>
+        <ul>
+            <li *ngFor="let job of jobs">
+                <a [routerLink]="['/jobs', job.id]">{{ job.title }}</a>
+            </li>
+        </ul>
+    </div>
+</div>  

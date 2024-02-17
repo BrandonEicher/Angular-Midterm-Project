@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { JobServiceService } from '../services/job-service.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,23 +7,16 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './job-details.component.html',
   styleUrl: './job-details.component.css'
 })
-export class JobDetailsComponent {
+export class JobDetailsComponent implements OnInit {
 
-  id: number = 0;
-  title: string = '';
-  description: string = '';
-  duration: string = '';
-  employer: string = '';
+  job: any;
 
-  constructor(private jobServiceService: JobServiceService, private actRoute: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private jobServiceService: JobServiceService) { }
 
   ngOnInit(): void {
-    console.log(this.actRoute.snapshot.paramMap);
-    const idString: string = this.actRoute.snapshot.paramMap.get('id') ?? "";
-    this.id = parseInt(idString);
-    this.jobServiceService.getJobs(this.id).subscribe(foundMeaning =>{
-      this.id = foundMeaning;
+    const jobId = Number(this.route.snapshot.paramMap.get('jobId') || '');
+    this.jobServiceService.getJob(jobId).subscribe(job => {
+      this.job = job;
     });
   }
-  
 }

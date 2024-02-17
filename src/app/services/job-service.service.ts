@@ -21,21 +21,14 @@ export class JobServiceService {
       employer: "Eicher Excavating"
     }
   ]
-  //Observable
-  getJobs(id: number): Observable<any>{
-    const foundJob = this.pastJobs.find(job => job.id === id)
-      return of(this.pastJobs);
-  }
-  //gets job based on id
-  getJob(job: string): Observable<any>{
-      let description: string = "";
-      this.pastJobs.forEach(w => {
-        if (w.job === job){
-          description = w.meaning;
-        }
-      });
-      return of(description);
-  }
 
   constructor() { }
+
+  getJobs(): Observable<any>{
+      return of(this.pastJobs);
+  }
+  getJob(id: number): Observable<any>{
+    const foundJob = this.pastJobs.find(job => job.id === id);
+    return of(foundJob);
+  }
 }
