@@ -1,0 +1,29 @@
+.navbar {
+    float: middle;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: darkgray;
+
+}
+.buttons {
+    padding: 10px;
+    margin: 10px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 15px;
+    width: 500px;
+}

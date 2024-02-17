@@ -1,18 +1,23 @@
 <div>
     <div>
-        <button routerLink = "/home">Home</button>
-        <button routerLink = "/about">About</button>
-        <button routerLink = "/jobs">Jobs</button>
+        <div class="navbar">
+            <button class="buttons" routerLink = "/home">Home</button>
+            <button class="buttons" routerLink = "/about">About</button>
+            <button class="buttons" routerLink = "/jobs">Jobs</button>
+        </div>
     </div>
-    <div>
-        <h1>Work History</h1>
-    </div>
-    <div *ngIf="jobs.length">
-        <h2>Jobs</h2>
-        <ul>
-            <li *ngFor="let job of jobs">
-                <a [routerLink]="['/jobs', job.id]">{{ job.title }}</a>
-            </li>
-        </ul>
+    <div class="flexContainer">
+        <div class="container">
+            <div class="title">
+                <h1>Work History</h1>
+            </div>
+            <div *ngIf="jobs.length">
+                <div>
+                    <div class="history" *ngFor="let job of jobs">
+                        <a [routerLink]="['/jobs', job.id]">{{ job.title }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>  

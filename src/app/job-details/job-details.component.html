@@ -1,6 +1,16 @@
-<div *ngIf="job">
-    <h2>{{ job.title }}</h2>
-    <p>{{ job.description }}</p>
-    <p>Duration: {{ job.duration }}</p>
-    <p>Employer: {{ job.employer }}</p>
+<div class="navbar">
+  <button class="buttons" routerLink = "/home">Home</button>
+  <button class="buttons" routerLink = "/about">About</button>
+  <button class="buttons" routerLink = "/jobs">Jobs</button>
+</div>
+<div class="flexContainer">
+  <div class="container">
+    <div *ngIf="job">
+        <h2>{{ job.title }}</h2>
+        <p>{{ job.description }}</p>
+        <p>Duration: {{ job.duration }}</p>
+        <p>Employer: {{ job.employer }}</p>
+        <button class="buttons" routerLink = "/jobs">Back</button>
+    </div>
   </div>
+</div>
