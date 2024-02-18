@@ -1,14 +1,14 @@
 .navbar {
     display: block;
-    color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 15px 15px;
     background-color: darkgray;
 }
 
 .buttons {
-    padding: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
     margin: 10px;
 }
 
@@ -33,9 +33,9 @@
 }
 
 .inspirationalSaying {
-    width: 30%;
+    width: 400px;
     text-align: center;
-    border: 2px solid  blue;
+    border: 2px solid black;
     padding: 15px;
     border-radius: 10px;
 
@@ -44,4 +44,8 @@
 .nextFlexContainer {
     display: flex;
     justify-content: center;
+}
+
+.buttons:hover {
+    background-color: rgb(70, 70, 70);
 }

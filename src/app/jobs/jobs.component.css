@@ -1,16 +1,16 @@
 .navbar {
     display: block;
-    color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 15px 15px;
     background-color: darkgray;
 
 }
 
 .buttons {
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
+    color: white;
+    text-decoration: none;
 }
 
 .flexContainer {
@@ -21,7 +21,7 @@
 
 .container {
     text-align: center;
-    border: 2px solid blue;
+    border: 2px solid black;
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
@@ -30,4 +30,8 @@
 
 .history {
     margin: 15px;
+}
+
+.buttons:hover {
+    background-color: rgb(70, 70, 70);
 }
